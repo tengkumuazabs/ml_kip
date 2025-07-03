@@ -42,8 +42,11 @@ row['Kartu Indonesia Pintar-Pendidikan Menengah'] = st.checkbox("Kartu Indonesia
 # Evaluate
 if st.button("Evaluasi"):
     result = evaluate_applicant(row)
-    st.subheader("Hasil Evaluasi")
-    st.write(result)
+    st.write("Hasil Evaluasi")
+    if result == 'LOLOS':
+        st.success(result)
+    else:
+        st.error(result)
 
 
 
